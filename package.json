@@ -5,7 +5,23 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "glob": "^7.1.6",
+    "moment": "^2.24.0",
     "next": "^9.1.4",
+    "node-sass": "^4.13.0",
+    "now": "^16.5.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }
