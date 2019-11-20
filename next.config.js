@@ -33,6 +33,17 @@ module.exports = withSass(withCSS({
     nodeVersion: process.version,
   },
 
+  webpack: (config, data) => {
+    config.module.rules.unshift({
+      enforce: 'pre',
+      exclude: /node_modules/u,
+      loader: 'eslint-loader',
+      test: /\.js$/u,
+    })
+
+    return config
+  },
+
   sassLoaderOptions: {
     includePaths: ['styles', 'node_modules']
       .map((dir) => path.join(__dirname, dir))
