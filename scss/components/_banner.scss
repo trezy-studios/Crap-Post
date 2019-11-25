@@ -1,5 +1,16 @@
 [role=banner] {
   ul {
     display: flex;
+    padding: 9px;
+    border: 1px solid black;
+    background-color: blue;
+  }
+  ul li a {
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    color: blue;
+    background-color: white;
+    border-radius: 3px;
   }
 }
