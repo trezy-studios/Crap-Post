@@ -1,0 +1,13 @@
+.brand {
+  font-family: Montserrat, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+
+  span:first-child {
+    font-weight: 200;
+  }
+
+  span:nth-child(2) {
+    font-weight: 400;
+  }
+}

@@ -7,7 +7,7 @@ import React from 'react'
 
 const Brand = () => (
   <div className="brand">
-    SmartConnect
+    <span>Smart</span><span>Connect</span>
   </div>
 )
 
