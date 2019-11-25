@@ -33,6 +33,8 @@ By contributing to this repository, you are expected to know and follow the rule
 
 ### Some things you'll need
 
+We follow a particular method of architecting our SCSS files You can find more information on that [here][css-arch-docs].
+
 > Tip: Keep your `develop` branch pointing at the original repository and make
 > pull requests from branches on your fork. To do this, run:
 >
@@ -115,6 +117,7 @@ There is also 1 additional type allowed for branches **only**
 
 
 [code-of-conduct]: CODE_OF_CONDUCT.md
+[css-arch-docs]: docs/CSS_ARCHITECTURE.md
 [all-contributors]: https://github.com/kentcdodds/all-contributors
 [bugs]: https://github.com/trezy-studios/Crap-Post/labels/bug
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
