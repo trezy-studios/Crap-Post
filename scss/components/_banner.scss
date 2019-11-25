@@ -1,17 +1,35 @@
 [role=banner] {
+  align-items: center;
+  background-color: blue;
+  border-bottom: 1px solid black;
+  color: white;
+  display: flex;
+
+  .brand {
+    margin-left: 1rem;
+  }
+
   ul {
     display: flex;
-    padding: 9px;
-    border: 1px solid black;
-    background-color: blue;
+    margin-left: auto;
 
-    li a {
-      text-decoration: none;
-      padding: 5px;
-      margin: 5px;
-      color: blue;
+    li {
+      align-items: stretch;
+      display: flex;
+    }
+
+    a {
       background-color: white;
-      border-radius: 3px;
+      color: blue;
+      flex-grow: 1;
+      line-height: 5rem;
+      text-decoration: none;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+
+      [data-icon] {
+        margin-right: 1rem;
+      }
     }
   }
 }
