@@ -192,6 +192,8 @@ class Document extends NextDocument {
 
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap" rel="stylesheet" />
         </Head>
 
         <body>
