@@ -7,6 +7,13 @@ import React from 'react'
 
 
 
+// Local imports
+import Brand from './Brand'
+
+
+
+
+
 // Local constants
 const navItems = [
   {
@@ -27,6 +34,8 @@ const navItems = [
 
 const Banner = () => (
   <nav role="banner">
+    <Brand />
+
     <ul>
       {navItems.map(({
         href,
