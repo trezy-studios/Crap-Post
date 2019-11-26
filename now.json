@@ -11,7 +11,7 @@
   "routes": [
     {
       "dest": "/storybook/index.html",
-      "src": "/storybook/"
+      "src": "/storybook/?"
     },
     {
       "dest": "/storybook/$1",
