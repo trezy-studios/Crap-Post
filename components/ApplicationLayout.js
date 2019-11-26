@@ -70,12 +70,6 @@ class ApplicationLayout extends React.Component {
 
     return (
       <div role="application">
-        <NextHead>
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"
-            rel="stylesheet" />
-        </NextHead>
-
         {renderLayout && (
           <Banner />
         )}
