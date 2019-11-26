@@ -1,9 +1,74 @@
 button {
-  background-color: none;
-  border: none;
+  background-color: var(--transparent);
+  border-color: var(--transparent);
+  border-style: solid;
+  border-width: 0;
+  border-radius: 0;
   color: inherit;
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  line-height: 5rem;
   margin: 0;
   padding: 0;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  white-space: nowrap;
+
+  $styles: (
+    (
+      background-color: blue,
+      text-color: white,
+      type: primary,
+    ),
+    (
+      background-color: white,
+      text-color: black,
+      type: secondary,
+    )
+  );
+
+  @each $style in $styles {
+    $background-color: map-get($style, 'background-color');
+    $text-color: map-get($style, 'text-color');
+    $type: map-get($style, 'type');
+
+    --button-#{$type}-background-color: hsla(var(--#{$background-color}-hsl), 0.7);
+    --button-#{$type}-border-color: var(--#{$background-color});
+    --button-#{$type}-text-color: var(--#{$text-color});
+    --button-#{$type}-background-color-hover: hsla(var(--#{$background-color}-hsl), 1);
+    --button-#{$type}-border-color-hover: var(--#{$background-color});
+    --button-#{$type}-text-color-hover: var(--#{$text-color});
+
+    &.#{$type} {
+      background-color: var(--button-#{$type}-background-color);
+      border-color: var(--button-#{$type}-border-color);
+      color: var(--button-#{$type}-text-color);
+
+      &:not([disabled=true]):hover {
+        background-color: var(--button-#{$type}-background-color-hover);
+        border-color: var(--button-#{$type}-border-color-hover);
+        color: var(--button-#{$type}-text-color-hover);
+      }
+    }
+
+    &.#{$type}-outline {
+      background-color: var(--transparent);
+      border-color: var(--button-#{$type}-background-color);
+      border-style: solid;
+      border-width: 0.1rem;
+      color: var(--button-#{$type}-background-color);
+
+      &:not([disabled=true]):hover {
+        background-color: var(--transparent);
+        border-color: var(--button-#{$type}-background-color-hover);
+        color: var(--button-#{$type}-background-color-hover);
+      }
+    }
+
+    &[disabled=true] {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
 }
