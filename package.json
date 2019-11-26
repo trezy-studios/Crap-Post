@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "build": "build-storybook -c .storybook -o public",
     "dev": "next",
     "storybook": "start-storybook"
   },
