@@ -1,8 +1,6 @@
 {
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.0",
