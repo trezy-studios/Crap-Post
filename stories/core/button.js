@@ -34,13 +34,13 @@ export const primary = () => (
 
     <div>
       <button
-        className="primary-outline"
+        className="primary outline"
         type="button">
         Primary Button
       </button>
 
       <button
-        className="primary-outline"
+        className="primary outline"
         disabled
         type="button">
         Primary Button (Disabled)

@@ -1,10 +1,10 @@
 button {
-  background-color: var(--transparent);
-  border-color: var(--transparent);
-  border-style: solid;
-  border-width: 0;
+  background-color: var(--button-background-color);
+  border-color: var(--button-border-color);
   border-radius: 0;
-  color: inherit;
+  border-style: solid;
+  border-width: 0.1rem;
+  color: var(--button-text-color);
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
@@ -13,7 +13,35 @@ button {
   padding: 0;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+  transition-duration: 0.2s;
+  transition-property:
+    background-color,
+    border-color,
+    color;
   white-space: nowrap;
+
+  &[disabled=true] {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &:not([disabled=true]):hover {
+    background-color: var(--button-background-color-hover);
+    border-color: var(--button-border-color-hover);
+    color: var(--button-text-color-hover);
+  }
+
+  &.outline {
+    background-color: var(--transparent);
+    border-color: var(--button-background-color);
+    color: var(--button-background-color);
+
+    &:not([disabled=true]):hover {
+      background-color: var(--transparent);
+      border-color: var(--button-background-color-hover);
+      color: var(--button-background-color-hover);
+    }
+  }
 
   $styles: (
     (
@@ -33,42 +61,13 @@ button {
     $text-color: map-get($style, 'text-color');
     $type: map-get($style, 'type');
 
-    --button-#{$type}-background-color: hsla(var(--#{$background-color}-hsl), 0.7);
-    --button-#{$type}-border-color: var(--#{$background-color});
-    --button-#{$type}-text-color: var(--#{$text-color});
-    --button-#{$type}-background-color-hover: hsla(var(--#{$background-color}-hsl), 1);
-    --button-#{$type}-border-color-hover: var(--#{$background-color});
-    --button-#{$type}-text-color-hover: var(--#{$text-color});
-
     &.#{$type} {
-      background-color: var(--button-#{$type}-background-color);
-      border-color: var(--button-#{$type}-border-color);
-      color: var(--button-#{$type}-text-color);
-
-      &:not([disabled=true]):hover {
-        background-color: var(--button-#{$type}-background-color-hover);
-        border-color: var(--button-#{$type}-border-color-hover);
-        color: var(--button-#{$type}-text-color-hover);
-      }
-    }
-
-    &.#{$type}-outline {
-      background-color: var(--transparent);
-      border-color: var(--button-#{$type}-background-color);
-      border-style: solid;
-      border-width: 0.1rem;
-      color: var(--button-#{$type}-background-color);
-
-      &:not([disabled=true]):hover {
-        background-color: var(--transparent);
-        border-color: var(--button-#{$type}-background-color-hover);
-        color: var(--button-#{$type}-background-color-hover);
-      }
-    }
-
-    &[disabled=true] {
-      cursor: not-allowed;
-      opacity: 0.7;
+      --button-background-color: hsla(var(--#{$background-color}-hsl), 0.7);
+      --button-border-color: var(--#{$background-color});
+      --button-text-color: var(--#{$text-color});
+      --button-background-color-hover: hsla(var(--#{$background-color}-hsl), 1);
+      --button-border-color-hover: var(--#{$background-color});
+      --button-text-color-hover: var(--#{$text-color});
     }
   }
 }
