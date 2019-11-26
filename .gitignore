@@ -5,3 +5,4 @@
 firebase-debug.log
 node_modules/
 logs/
+public/storybook/
