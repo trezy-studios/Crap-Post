@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "build-storybook -c .storybook -o public",
     "dev": "next",
     "storybook": "start-storybook"
   },
@@ -27,6 +28,7 @@
     "@zeit/next-sass": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-loader": "^3.0.2",
@@ -38,6 +40,8 @@
     "node-sass": "^4.13.0",
     "now": "^16.5.2",
     "postcss-easy-import": "^3.0.0",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
   }
 }
