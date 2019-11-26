@@ -1,5 +1,4 @@
 // Module imports
-import NextHead from 'next/head'
 import NextError from 'next/error'
 import PropTypes from 'prop-types'
 import React from 'react'
