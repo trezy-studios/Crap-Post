@@ -6,9 +6,9 @@ import React from 'react'
 
 
 const Brand = () => (
-  <div className="brand">
-    <span>Smart</span><span>Connect</span>
-  </div>
+  <h1 className="brand">
+    <span>Connect</span><span>Smart</span>
+  </h1>
 )
 
 

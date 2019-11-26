@@ -1,7 +1,5 @@
 // Style imports
 /* eslint-disable import/no-unassigned-import */
-import '../scss/reset.scss'
-import '../scss/lib.scss'
 import '../scss/app.scss'
 /* eslint-enable */
 
