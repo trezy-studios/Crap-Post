@@ -37,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "faker": "^4.1.0",
     "node-sass": "^4.13.0",
     "now": "^16.5.2",
     "postcss-easy-import": "^3.0.0",
