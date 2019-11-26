@@ -7,7 +7,7 @@ import React from 'react'
 
 const Brand = () => (
   <h1 className="brand">
-    <span>Smart</span><span>Connect</span>
+    <span>Connect</span><span>Smart</span>
   </h1>
 )
 
