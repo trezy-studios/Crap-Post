@@ -1,9 +1,73 @@
 button {
-  background-color: none;
-  border: none;
-  color: inherit;
+  background-color: var(--button-background-color);
+  border-color: var(--button-border-color);
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0.1rem;
+  color: var(--button-text-color);
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  line-height: 5rem;
   margin: 0;
   padding: 0;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  transition-duration: 0.2s;
+  transition-property:
+    background-color,
+    border-color,
+    color;
+  white-space: nowrap;
+
+  &[disabled=true] {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &:not([disabled=true]):hover {
+    background-color: var(--button-background-color-hover);
+    border-color: var(--button-border-color-hover);
+    color: var(--button-text-color-hover);
+  }
+
+  &.outline {
+    background-color: var(--transparent);
+    border-color: var(--button-background-color);
+    color: var(--button-background-color);
+
+    &:not([disabled=true]):hover {
+      background-color: var(--transparent);
+      border-color: var(--button-background-color-hover);
+      color: var(--button-background-color-hover);
+    }
+  }
+
+  $styles: (
+    (
+      background-color: blue,
+      text-color: white,
+      type: primary,
+    ),
+    (
+      background-color: white,
+      text-color: black,
+      type: secondary,
+    )
+  );
+
+  @each $style in $styles {
+    $background-color: map-get($style, 'background-color');
+    $text-color: map-get($style, 'text-color');
+    $type: map-get($style, 'type');
+
+    &.#{$type} {
+      --button-background-color: hsla(var(--#{$background-color}-hsl), 0.7);
+      --button-border-color: var(--#{$background-color});
+      --button-text-color: var(--#{$text-color});
+      --button-background-color-hover: hsla(var(--#{$background-color}-hsl), 1);
+      --button-border-color-hover: var(--#{$background-color});
+      --button-text-color-hover: var(--#{$text-color});
+    }
+  }
 }

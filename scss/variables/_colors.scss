@@ -1,0 +1,42 @@
+@mixin connectsmart-generateHSLCustomProperties($name, $h, $s, $l) {
+  --#{$name}-h: calc(#{$h} + var(--hue-shift));
+  --#{$name}-s: #{$s};
+  --#{$name}-l: #{$l};
+
+  --#{$name}-hsl: var(--#{$name}-h), var(--#{$name}-s), var(--#{$name}-l);
+
+  --#{$name}: hsl(var(--#{$name}-hsl));
+}
+
+@mixin connectsmart-generateHSLCustomPropertiesFromColor($color) {
+  @include connectsmart-generateHSLCustomProperties(
+    $color,
+    hue($color),
+    saturation($color),
+    lightness($color),
+  )
+}
+
+@mixin connectsmart-generateHSLCustomPropertiesFromHex($name, $color) {
+  @include connectsmart-generateHSLCustomProperties(
+    $name,
+    hue($color),
+    saturation($color),
+    lightness($color),
+  )
+}
+
+:root {
+  --hue-shift: 0deg;
+
+  // Generate individual hue, saturation, and lightness properties, as well as
+  // full HSL and color props
+  @include connectsmart-generateHSLCustomPropertiesFromColor(black);
+  @include connectsmart-generateHSLCustomPropertiesFromColor(blue);
+  @include connectsmart-generateHSLCustomPropertiesFromColor(white);
+
+  --brand-primary: var(--blue);
+
+  --background-color: var(--white);
+  --text-color: var(--black);
+}

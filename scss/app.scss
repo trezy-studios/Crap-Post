@@ -1,3 +1,12 @@
+// Variables
+
+@import './variables/colors';
+@import './variables/sizes';
+
+
+
+
+
 // Modules
 
 @import './reset';
@@ -10,9 +19,12 @@
 // Core
 
 @import './core/all';
+@import './core/article';
 @import './core/body';
+@import './core/button';
 @import './core/headings';
 @import './core/html';
+@import './core/p';
 
 
 
